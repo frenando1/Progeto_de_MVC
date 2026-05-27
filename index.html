@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletim Cloud - Arquitetura MVC</title>
+    
+    <link rel="stylesheet" href="css/stilo.css">
+    
+    <script src="js/model.js" defer></script>
+    <script src="js/view.js" defer></script>
+    <script src="js/controller.js" defer></script>
+
+</head>
+<body>
+    
+    <div class="container">
+
+        <form id="MeuForm">
+
+            <div class="form-header">
+
+                <h1>Calculadora de Média</h1>
+                <span class="badge-mvc badge-controller">Controller</span>
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="nome">Nome do Aluno</label>
+                <input type="text" id="nome" placeholder="Nome Completo" required>
+
+            </div>
+
+            <div class="grid-notas">
+
+                <div class="input-group">
+
+                    <label>Nota 1</label>
+                    <input type="number" id="nota1" step="0.1" min="0" max="10" required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Nota 2</label>
+                    <input type="number" id="nota2" step="0.1" min="0" max="10" required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Nota 3</label>
+                    <input type="number" id="nota3" step="0.1" min="0" max="10" required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Nota 4</label>
+                    <input type="number" id="nota4" step="0.1" min="0" max="10" required>
+
+                </div>
+
+            </div>
+
+            <button type="submit" id="btnSalvar">Calculor e Salvar</button>
+            <button type="button" id="btnLimpar" class="btn-secundario">Limpar Campos</button>
+
+            <p id="statusMsg"></p>
+
+        </form>
+
+        <section class="lista-container">
+
+            <div class="form-header">
+
+                <h2>Registros Salvos</h2>
+                <span class="badge-mvc badge-model">Model</span>
+
+            </div>
+
+            <div id="listaAlunos"></div>
+        
+        </section>
+
+    </div>
+
+
+</body>
+
+</html>
